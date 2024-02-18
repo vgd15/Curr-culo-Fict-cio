@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Krona+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Open+Sans&display=swap" rel="stylesheet');
+
+:root{
+    --cor-primaria: #1c2130;
+    --cor-secundaria: #e1e3ac;
+    --cor-terciaria: #648a64;
+    --cor-hover: #46685b;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    box-sizing: border-box;
+    background: var(--cor-primaria);
+}
+
+header{
+    flex-wrap: wrap;
+    justify-content: start;
+    margin:50px 19%;
+}
+header ul{
+    display: flex;
+    flex-direction: row;
+    gap:82px;
+    list-style: none;
+}
+.geral, .geral-curriculo{ 
+    margin: 0 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.geral-curriculo ul:last-child{
+    margin-bottom:82px;
+}
+
+ul li a{
+    font-family: Montserrat;
+    color:var(--cor-secundaria);
+    font-size: 1.5rem;
+    text-decoration: none;
+
+}
+
+.texto, .texto-sobre-mim{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.imagem{
+    width:43%;
+}
+
+.introducao, .introducao-sobre-mim{
+    font-family: var(--fonte-primaria);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 56px;
+    color:var(--cor-secundaria);
+    margin-bottom: 30px;
+}
+
+.introducao-sobre-mim{
+    width:100%;
+}
+
+.introducao-azul{
+   color: var(--cor-terciaria);
+}
+
+body h3{
+    font-family: Krona One;
+    margin-bottom:10px;
+}
+
+.texto p{
+  margin-bottom: 30px;
+}
+
+.texto p,h3, .p-sobre-mim, .lista{
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:16px;
+}
+
+.botoes p{
+font-family: Krona One;
+font-size: 1.5rem;
+font-weight: 400;
+line-height: 40px;
+text-align: center;
+
+}
+
+button{
+    width: 378px;
+    padding:15px 11px 17px;
+    background: transparent;
+    border:1px solid var(--cor-terciaria);
+    border-radius: 16px;
+}
+
+button:hover{
+    background: var(--cor-hover);
+    padding:3%;
+}
+
+button a{
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button a img{
+    margin-right: 15px;
+}
+
+footer{
+    background: var(--cor-terciaria);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:100px;
+}
+
+footer p{
+    color:var(--cor-primaria);
+    font-family: var(--font-secundaria);
+}
+
+
+@media (max-width: 1200px){
+
+    .geral-curriculo img{
+        width: 100%;
+    }
+
+    .geral-curriculo .texto{
+        display: unset;
+    }
+
+    .geral-curriculo{
+        margin:0 10%;
+    }
+
+    .geral-curriculo img{
+        width: 100%;
+    }
+
+    .geral{
+        flex-direction: column-reverse;
+        gap:82px;
+       
+    }
+
+    .texto, .imagem{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header ul{
+        justify-content: center;
+    }
+
+    .texto-sobre-mim{
+        width:100%
+    }
+}
+
+@media (max-width: 575px){
+    .imagem img{
+        width: 100%;
+    }
+
+    ul li a{
+        font-size:1rem;
+    }
+
+    header ul{
+        gap:30px
+    }
+
+    body .texto-sobre-mim {
+        width: 100%;
+    }
+}
